@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Phone Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/tokens.css" />
+  <link rel="stylesheet" href="../styles/chrome.css" />
+  <link rel="stylesheet" href="../styles/pages.css" />
+  <link rel="stylesheet" href="../styles/responsive.css" />
+</head>
+<body class="page-sub">
+  <header class="topbar" id="topbar"></header>
+
+  <main class="page-shell">
+    <div class="page-head">
+      <h1 class="page-title">Talk to the Hardware Desk</h1>
+      <p class="page-lead">Upgrade consultations, corporate fleet quotes, warranty checks, or trade-in valuations — our specialists respond within one business day.</p>
+    </div>
+
+    <div class="split-grid">
+      <section class="sheet" aria-label="Contact form">
+        <h2 class="sheet-title">Send an inquiry</h2>
+        <form id="contact-form" class="form-stack" novalidate>
+          <div class="field">
+            <label for="c-name">Your name</label>
+            <input class="input" id="c-name" name="name" type="text" placeholder="Minh Nguyen" required />
+          </div>
+          <div class="field">
+            <label for="c-email">Email address</label>
+            <input class="input" id="c-email" name="email" type="email" placeholder="you@studio.design" required />
+          </div>
+          <div class="field">
+            <label for="c-topic">Topic</label>
+            <select class="select" id="c-topic" name="topic">
+              <option value="Device Advice">Device & Camera Advice</option>
+              <option value="Trade-In & Upgrade">Trade-In & Upgrade</option>
+              <option value="Order & Warranty">Order & Warranty Support</option>
+              <option value="Corporate Fleet">Corporate & Team Orders</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea class="textarea" id="c-message" name="message" placeholder="Tell us which flagship or brand you are comparing..." required></textarea>
+          </div>
+          <div id="contact-msg" class="form-msg" role="alert"></div>
+          <div>
+            <button type="submit" class="btn-primary">Send message</button>
+          </div>
+        </form>
+      </section>
+
+      <aside>
+        <h2 class="sheet-title">Flagship Studio</h2>
+        <div class="info-list">
+          <div class="info-row">
+            <span class="info-label">Support Desk</span>
+            <span class="info-val">care@phoneroom.store</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Corporate Orders</span>
+            <span class="info-val">fleet@phoneroom.store</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Showroom</span>
+            <span class="info-val">48 Mercer St, Floor 2</span>
+          </div>
+          <div class="info-row">
+            <span class="info-label">Hours</span>
+            <span class="info-val">Mon – Sat, 09:00 – 20:00</span>
+          </div>
+        </div>
+
+        <div id="recent-inquiries" style="margin-top: 28px;"></div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="../src/pages/contact.js"></script>
+</body>
+</html>

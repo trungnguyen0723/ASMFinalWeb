@@ -1,0 +1,10 @@
+{
+  "name": "phone-room",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Phone Room — Interactive 3D flagship smartphone showcase and multipage store",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "test": "node tests/verify.mjs"
+  }
+}

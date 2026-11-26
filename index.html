@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phone Room — Flagship Smartphone Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/chrome.css" />
+  <link rel="stylesheet" href="styles/phone-3d.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+  <link rel="stylesheet" href="styles/responsive.css" />
+</head>
+<body class="page-home">
+  <header class="topbar" id="topbar"></header>
+
+  <main class="hero-copy" id="hero-copy">
+    <h1 class="headline">
+      <span class="hl-line"><span class="hl-inner">One Room for</span></span>
+      <span class="hl-line">
+        <span class="hl-inner">
+          Every
+          <span class="mini-slot">
+            <button type="button" class="mini-phone" id="mini-phone" aria-label="Shuffle phone lineup" title="Click to shuffle">
+              <span class="mini-face frontface"><img id="mini-img-a" alt="" /></span>
+              <span class="mini-face backface"><img id="mini-img-b" alt="" /></span>
+              <span class="mini-rail"></span>
+            </button>
+          </span>
+          Flagship.
+        </span>
+      </span>
+    </h1>
+    <p class="subline">A curated smartphone gallery comparing flagship silicon, optics, and industrial craft.</p>
+    <div class="hero-actions">
+      <button type="button" class="cta" id="cta-btn">
+        <span id="cta-label">View All Models</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M5 12h14"></path>
+          <path d="m13 6 6 6-6 6"></path>
+        </svg>
+      </button>
+      <div class="chips" id="chips">
+        <button type="button" class="chip" data-brand="Apple">Apple <span>3</span></button>
+        <button type="button" class="chip" data-brand="Samsung">Samsung <span>3</span></button>
+        <button type="button" class="chip" data-brand="OPPO">OPPO <span>3</span></button>
+        <button type="button" class="chip" data-brand="Xiaomi">Xiaomi <span>3</span></button>
+      </div>
+    </div>
+  </main>
+
+  <div id="stage" aria-label="Interactive 3D smartphone orbit"></div>
+
+  <div class="hints">Drag to throw · Scroll to spin · Click to inspect</div>
+
+  <div class="layout-switch" role="group" aria-label="Layout mode">
+    <button type="button" id="sw-orbit" class="active">Orbit</button>
+    <button type="button" id="sw-grid">Grid</button>
+  </div>
+
+  <button type="button" id="focus-close" aria-label="Close phone view">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+      <path d="M18 6 6 18M6 6l12 12"></path>
+    </svg>
+  </button>
+
+  <aside id="focus-panel" aria-live="polite">
+    <div class="fp-kicker fp-stagger" id="fp-kicker"></div>
+    <h2 class="fp-title fp-stagger" id="fp-title"></h2>
+    <p class="fp-author fp-stagger" id="fp-sub"></p>
+    <div class="fp-meta fp-stagger">
+      <div>
+        <div class="fp-meta-label">Processor</div>
+        <div class="fp-meta-val" id="fp-chip"></div>
+      </div>
+      <div>
+        <div class="fp-meta-label">Display</div>
+        <div class="fp-meta-val" id="fp-display"></div>
+      </div>
+      <div>
+        <div class="fp-meta-label">Camera</div>
+        <div class="fp-meta-val" id="fp-camera"></div>
+      </div>
+    </div>
+    <p class="fp-note fp-stagger" id="fp-note"></p>
+    <div class="fp-actions fp-stagger">
+      <button type="button" class="btn-primary" id="fp-flip">Inspect Back</button>
+      <button type="button" class="btn-outline" id="fp-save">Save phone</button>
+      <button type="button" class="btn-outline" id="fp-cart">Add to cart</button>
+    </div>
+  </aside>
+
+  <div id="focus-nav">
+    <button type="button" id="fp-prev" aria-label="Previous phone">←</button>
+    <button type="button" id="fp-next" aria-label="Next phone">→</button>
+  </div>
+
+  <div id="tooltip" role="status" aria-hidden="true"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script type="module" src="src/pages/home.js"></script>
+</body>
+</html>
